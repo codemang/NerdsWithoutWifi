@@ -11,12 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150706170519) do
+ActiveRecord::Schema.define(version: 20150706172406) do
 
   create_table "trips", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "parkName"
+    t.string   "parkProfilePic"
+    t.string   "parkAddress"
   end
 
 end

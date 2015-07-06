@@ -14,6 +14,10 @@
     <% @trips.each do |trip| %>
       <tr>
         <td><%= trip.title %></td>
+                <td><%= trip.parkName %></td>
+        <td><%= trip.parkAddress %></td>
+        <td><%= trip.parkProfilePic %></td>
+
         <td><%= link_to 'Show', trip %></td>
         <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
         <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>

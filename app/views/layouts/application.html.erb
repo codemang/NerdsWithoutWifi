@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<div class="left_column">
+	 <% @trips.each do |trip| %>
+        <div class="left_column_trip_name"><%= trip.title %></div>
+      <% end %>
+</div>
 <%= yield %>
 
 </body>
