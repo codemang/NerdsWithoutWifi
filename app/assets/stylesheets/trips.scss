@@ -1,3 +1,20 @@
 // Place all the styles related to the Trips controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.banner_container {
+		  width: 70%;
+		  position: relative;
+}
+
+.banner_overlay {
+	  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  background-color: rgba(0, 0, 0, 0.74);
+}
+.banner_pic {
+	width: 100%;
+}

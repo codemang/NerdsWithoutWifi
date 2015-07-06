@@ -1,9 +1,7 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @trip.title %>
-</p>
-
-<%= link_to 'Edit', edit_trip_path(@trip) %> |
-<%= link_to 'Back', trips_path %>
+<div class="banner_container">
+	<%= image_tag("mountain.jpg", :class => "banner_pic") %>
+	<div class="banner_overlay">
+		<p class="trip_name"><%= @trip.title %></p>
+	</div>
+</div>
