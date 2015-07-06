@@ -9,25 +9,34 @@
 <body>
 
 <div class="left_column">
+	<%= image_tag("pic.jpg", :class => "left_column_pic") %>
+
+	<p class="left_column_title">Trips Completed</p>
 	<% if !@trips.nil? %>
 	 <% @trips.each do |trip| %>
-        <div class="left_column_trip_name"><%= trip.title %></div>
+		<%= link_to trip.parkName, trip, class: "left_column_trip_name" %>
+        <!--<div class="left_column_trip_name"><%= trip.title %></div>-->
       <% end %>
     <% end %>
+
+    <p class="left_column_title">Next Trip</p>
     
-    <!-- facebook like button -->
+    <!-- facebook like button
     <div
         class="fb-like"
         data-share="false"
-        data-width="450"
         data-show-faces="true">
     </div>
+    -->
+    <%= Trip::FB_ALBUM_ID %>
+
+
 </div>
 <div class="right_column">
 	<div class="top_column"></div>
 	<div class="bottom_column">
 	<%= yield %>
-</div>
+	</div>
 </div>
 
 
