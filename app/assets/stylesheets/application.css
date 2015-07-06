@@ -58,11 +58,18 @@ table {
 	border-spacing: 0;
 }
 
+.right_column {
+	height: 100vh;
+	float: right;
+	width: calc(100% - 220px);
+}
+
 .left_column {
-	width: 150px;
+	width: 220px;
   height: 100vh;
   background-color: red;
   padding-top: 1px;
+  float: left;
 }
 
 .left_column_trip_name {
@@ -73,4 +80,10 @@ table {
   margin-left: 20px;
   margin-top: 20px;
   font-size: 20px;
+}
+
+.top_column {
+	height: 200px;
+	width: 100%;
+	background-color: 	blue;
 }
