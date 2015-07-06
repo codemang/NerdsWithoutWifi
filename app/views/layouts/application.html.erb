@@ -15,6 +15,9 @@
 	<% if !@trips.nil? %>
 	 <% @trips.each do |trip| %>
 		<%= link_to trip.parkName, trip, class: "left_column_trip_name" %>
+		<%= trip.content << "AA" %>
+		<%= trip.save %>
+		<div><%=trip.content%></div>
         <!--<div class="left_column_trip_name"><%= trip.title %></div>-->
       <% end %>
     <% end %>
