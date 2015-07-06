@@ -9,9 +9,11 @@
 <body>
 
 <div class="left_column">
+	<% if !@trips.nil? %>
 	 <% @trips.each do |trip| %>
         <div class="left_column_trip_name"><%= trip.title %></div>
       <% end %>
+    <% end %>
 </div>
 <div class="right_column">
 	<div class="top_column"></div>
