@@ -1,3 +1,3 @@
 class Trip < ActiveRecord::Base
-	serialize :stuff, Array
+	serialize :content, Array
 end

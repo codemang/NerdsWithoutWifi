@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title  %>
   </div>
 
     <div class="field">
-    <%= f.label :ParkName %><br>
+    <%= f.label "HEY" %><br>
     <%= f.text_field :parkName %>
   </div>
 
@@ -33,4 +33,15 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+     <%= @trip.content.each do |content| %>
+       <div class="field">
+        <%= f.fields_for content, index: content.id do |address_form|%>
+      <%= address_form.text_field :city %>
+    <% end %>
+    <!--<%= f.label "Content " %><br>
+    <%= f.text_field  :content%>-->
+  </div>
+      
+      <% end %>
 <% end %>
