@@ -87,3 +87,20 @@ table {
 	width: 100%;
 	background-color: 	blue;
 }
+
+.bottom_column {
+	width: 100%;
+	height: calc(100% - 200px);
+	padding-left: 25px;
+	padding-top: 25px;
+}
+
+.page_title {
+	font-size: 35px;
+	margin-top: 25px;
+}
+
+.page_paragraph {
+	  font-size: 20px;
+  margin-top: 10px;
+}
