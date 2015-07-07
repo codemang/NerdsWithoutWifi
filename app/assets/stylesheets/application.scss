@@ -34,6 +34,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -64,8 +65,8 @@ p, a, div {
 .right_column {
 	height: 100vh;
 	float: right;
-	width: calc(100% - 220px);
-	padding-right: 30px;
+	width: calc(100% - 235px); /*220px + padding-right*/
+	padding-right: 15px; 
 }
 
 .left_column {
@@ -161,4 +162,8 @@ font-size: 18px;
   margin-left: 10px;
   margin-right: -10px;
   margin-bottom: -8px;
+}
+
+.developedby {
+  visibility: hidden !important;
 }
