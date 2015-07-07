@@ -74,16 +74,24 @@ p, a, div {
   padding-top: 1px;
   float: left;
   background-image: asset-data-url("pentagon.png");
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.18);
+  /* z-index: 5; */
+  position: relative;
 }
 
 .left_column_trip_name {
 	display: block;
 	color: rgb(102, 83, 83);
-  margin-top: 20px;
-  font-size: 20px;
+  margin-top: 12px;
+  font-size: 18px;
   margin-left: 13px;
   transition: color .3s;
   text-decoration: none;
+  display: inline-block;
+}
+
+.selected {
+	color: rgb(252, 145, 4);
 }
 
 .left_column_trip_name:hover {
@@ -92,9 +100,14 @@ p, a, div {
 }
 
 .left_column_pic {
-	  width: 80%;
-  margin-left: 10%;
+  width: 95%;
+  margin-left: 2%;
   margin-top: 50px;
+  transform: rotate(90deg);
+  border-radius: 3px;
+  padding: 5px;
+  background-color: rgb(147, 192, 161);
+  margin-bottom: 40px;
 }
 
 .left_column_title {
@@ -114,23 +127,37 @@ p, a, div {
 }
 
 .bottom_column {
-	width: calc(100%-25px);
-	height: calc(100% - 25px);
-		padding-left: 25px;
-	padding-top: 25px;
+	width: calc(100% - 50px);
+	height: calc(100% - 0px);
+		padding-left: 50px;
+	padding-top: 0px;
 		background-color: rgb(250, 250, 250);
+		overflow: scroll
 
 }
 
 .page_title {
 	font-size: 35px;
-	margin-top: 25px;
+	margin-top: 45px;
 	color: rgb(22, 32, 129);
 }
 
 .page_paragraph {
-	  font-size: 20px;
+font-size: 18px;
   margin-top: 10px;
-  	color: rgb(102, 83, 83);
+  color: #665353;
+  line-height: 33px;
+  max-width: 750px;
 
+}
+
+.orange_box {
+  display: inline-block;
+  height: 28px;
+  width: 4px;
+  color: orange;
+  background-color: orange;
+  margin-left: 10px;
+  margin-right: -10px;
+  margin-bottom: -8px;
 }

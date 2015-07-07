@@ -3,8 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .banner_container {
-		  width: 70%;
+		  width: 700px;
+		  height: 400px;
 		  position: relative;
+		  margin-top: 40px;
 }
 
 .banner_overlay {
@@ -17,4 +19,40 @@
 }
 .banner_pic {
 	width: 100%;
+	height: 100%;
 }
+
+.trip_text {
+	  font-size: 20px;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-right: 40px;
+  max-width: 750px;
+  margin-bottom: 30px;
+}
+
+.trip_name {
+	  font-family: avenir;
+  color: white;
+  line-height: 71px;
+  margin-left: 30px;
+  font-size: 30px;
+  display: inline-block;
+}
+
+.full_album_link {
+	font-family: avenir;
+  color: white;
+  line-height: 71px;
+  font-size: 16px;
+  display: inline-block;
+  float: right;
+  font-style: italic;
+  margin-right: 30px;
+  transition: color .3s;
+}
+
+.full_album_link:hover {
+	color: rgb(54, 113, 155);
+	cursor: pointer;
+	}
