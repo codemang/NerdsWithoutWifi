@@ -15,10 +15,10 @@
 	<% if !@trips.nil? %>
 	<% @count = 0 %>
 	 <% @trips.each do |trip| %>
-		<% @class = (Integer(params[:num]) == @count ? "orange_box" : "") %>
+		<% @class = (!params[:num].nil? && Integer(params[:num]) == @count ? "orange_box" : "") %>
 		<div>
 	 	<div class="<%= @class %>"></div>
-		<% @class = (Integer(params[:num]) == @count ? "left_column_trip_name selected" : "left_column_trip_name") %>
+		<% @class = (!params[:num].nil? && Integer(params[:num]) == @count ? "left_column_trip_name selected" : "left_column_trip_name") %>
 		<%= link_to trip.parkName, trip_path(:id => trip.id, :num => @count), class: @class %>
 	</div>
 		<% @count += 1 %>
