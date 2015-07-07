@@ -94,7 +94,7 @@ p, a, div {
 	color: rgb(252, 145, 4);
 }
 
-.left_column_trip_name:hover {
+.left_column_trip_name:not(.selected):hover {
 	color: rgb(54, 113, 155);
 	cursor: pointer;
 }
@@ -115,7 +115,7 @@ p, a, div {
   font-family: avenir;
   /* font-style: oblique; */
   font-weight: 400;
-  font-size: 25px;
+  font-size: 22px;
   margin-left: 10px;
   margin-top: 40px;
 }

@@ -7,7 +7,7 @@
 
 	</div>
 </div>
-<% content = @trip.content.split(":") %>
+<% content = @trip.content.split("`") %>
 <% (content.length/2).times do |count| %>
 	<% if content[count*2] == "text" %>
 		<p class="trip_text"><%=content[count*2 + 1]%></p>
@@ -18,5 +18,8 @@
 	<% end %>
 <% end %> 
 
-
-<a href="Full Album"
+<div class="button_container">
+<a href="Full Album" class="trip_button">Previous Trip</a>
+<a href="Full Album" class="trip_button">View Full Album</a>
+<a href="Full Album" class="trip_button">Next Trip</a>
+</div>
