@@ -17,7 +17,7 @@
   </div>
 
     <div class="field">
-    <%= f.label "HEY" %><br>
+    <%= f.label "Name of park" %><br>
     <%= f.text_field :parkName %>
   </div>
 
@@ -30,18 +30,15 @@
     <%= f.label :parkProfilePic %><br>
     <%= f.text_field :parkProfilePic %>
   </div>
+
+
+    <div class="field">
+    <%= f.label "JSON Content" %><br>
+    <%= f.text_area :content, :size => "60x10" %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 
-     <%= @trip.content.each do |content| %>
-       <div class="field">
-        <%= f.fields_for content, index: content.id do |address_form|%>
-      <%= address_form.text_field :city %>
-    <% end %>
-    <!--<%= f.label "Content " %><br>
-    <%= f.text_field  :content%>-->
-  </div>
-      
-      <% end %>
 <% end %>

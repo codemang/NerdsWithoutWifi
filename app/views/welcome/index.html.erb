@@ -1,5 +1,33 @@
-<p class="page_title">Welcome To Our Blog</p>
-<p class="page_paragraph">This is a site to document our travels blah blah blah</p>
+<p class="page_title">/Welcome To The Blog Of All Blogs</p>
+<p class="page_paragraph">Hello you peoples! We the people (Asher, Aaron, and Nate) have begun our epic backpacking trip out west. Initially it was intended to be a small break from our nerdy lives where we could enjoy the peace and quiet of nature. But when we found out about Asher's quad-charging, wifi capable car, we knew the fates had other things in store. So we spent the first 14 hour drive to Colorado creating this blog! That's right kids, our camping trip became the ultimate hackathon. We hope you follow our adventures and watch as our baby site grows in functionality and beauty. </p>
+
+<p class="page_title">/Our Trip So Far</p>
+
+ <style type="text/css">
+      #map-canvas { height: 50%; width: 70%; margin-top: 40px; padding: 0; margin-bottom: 50px;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhnu9L0kepBM1L27QG2RMVAib7QxicZWs">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat: 39.75, lng: -104.87},
+          zoom: 4
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+         var marker = new google.maps.Marker({
+      position: mapOptions['center'],
+      map: map,
+      title: 'Hello World!'
+  });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    <div id="map-canvas"></div>
 
 <p class="page_title">Our Trip So Far</p>
 

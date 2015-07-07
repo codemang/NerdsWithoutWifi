@@ -2,6 +2,21 @@
 <div class="banner_container">
 	<%= image_tag("mountain.jpg", :class => "banner_pic") %>
 	<div class="banner_overlay">
-		<p class="trip_name"><%= @trip.title %></p>
+		<p class="trip_name"><%= @trip.parkName %></p>
+						<a class="full_album_link">See Full Album</a>
+
 	</div>
 </div>
+<% content = @trip.content.split(":") %>
+<% (content.length/2).times do |count| %>
+	<% if content[count*2] == "text" %>
+		<p class="trip_text"><%=content[count*2 + 1]%></p>
+
+	<% elsif content[count*2] == "image" %>
+
+		<img src= "<%= content[count*2 + 1] %>" />
+	<% end %>
+<% end %> 
+
+
+<a href="Full Album"

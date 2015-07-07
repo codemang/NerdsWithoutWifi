@@ -10,6 +10,9 @@ class TripsController < ApplicationController
   # GET /trips/1
   # GET /trips/1.json
   def show
+        @trips = Trip.all
+
+        @trip = Trip.find(params[:id])
   end
 
   # GET /trips/new
@@ -69,6 +72,6 @@ class TripsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trip_params
-      params.require(:trip).permit(:title, :parkName, :parkAddress, :parkProfilePic)
+      params.require(:trip).permit(:title, :parkName, :parkAddress, :parkProfilePic, :content)
     end
 end
