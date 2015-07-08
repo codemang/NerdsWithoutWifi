@@ -1,0 +1,40 @@
+<div class="banner_container">
+	<%= image_tag('https://scontent-dfw1-1.xx.fbcdn.net/hphotos-xfp1/v/l/t1.0-9/11692659_547776502043214_2366998275035962680_n.jpg?oh=96e2f234b6c0ee123a309be5933401f0&oe=565B9691', :class => "banner_pic") %>
+	<div class="banner_overlay">
+		<p class="trip_name"> PreTrip </p>
+						<a class="full_album_link">See Full Album</a>
+
+	</div>
+</div>
+<div class="blog_container">
+<% content = @trip.content.split("`") %>
+<% nex = 0 %>
+<% (content.length).times do |count| %>
+	<% if nex != count %>
+		<% next %>
+	<% end %>
+
+	<% if content[count] == "text" %>
+		<p class="trip_text"><%=content[count + 1]%></p>
+		<% nex += 2 %>
+	<% elsif content[count] == "image" %>
+		<img src= "<%= content[count + 2] %>" class="<%= content[count+1] %>"/>
+		<% nex += 3 %>
+	<% end %>
+<% end %> 
+</div>
+
+
+
+<div class="button_container">
+	<% if false %>
+		<% if !@trip.previous.nil? %>
+			<%= link_to "Previous Trip", trip_path(:id => @trip.previous.id, :num => Integer(params[:num])-1), class: "trip_button" %>
+		<% end %>
+			<%= link_to "View Full Album", trip_path, class: "trip_button" %>
+	<% end %>
+
+<% if !@trip.next.nil? %>
+		<%= link_to "Next Trip", trip_path(:id => @trip.next.id, :num => Integer(params[:num])+1), class: "trip_button" %>
+	<% end %>
+

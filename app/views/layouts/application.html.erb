@@ -14,7 +14,9 @@
 
 	<%= image_tag("pic.jpg", :class => "left_column_pic", :angle => 90) %>
 
-	<p class="left_column_title">Trips Completed</p>
+	<div class="left_column_title">
+		<a style="text-decoration:none" href="/pretrip">PreTrip</p>
+	</div>
 	<% if !@trips.nil? %>
 	<% @count = 0 %>
 	 <% @trips.each do |trip| %>
