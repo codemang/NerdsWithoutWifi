@@ -12,18 +12,38 @@
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
-          center: { lat: 39.75, lng: -104.87},
+          center: { lat: 41.949463, lng: -87.665624},
           zoom: 4
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
 
          var marker = new google.maps.Marker({
-      position: mapOptions['center'],
-      map: map,
-      title: 'Hello World!'
-  });
-      }
+	      position: mapOptions['center'],
+	      map: map,
+	      title: 'Hello World!'
+		  });
+
+           var marker1 = new google.maps.Marker({
+		      position: { lat: 39.75, lng: -104.87},
+		      map: map,
+		      title: 'Hello World!'
+		  });
+      
+
+		  var flightPath = new google.maps.Polyline({
+		    path: [marker.position, marker1.position],
+		    geodesic: true,
+		    strokeColor: '#FF0000',
+		    strokeOpacity: 1.0,
+		    strokeWeight: 2
+		  });
+
+          flightPath.setMap(map);
+
+
+    }
+
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
