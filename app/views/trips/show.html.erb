@@ -29,7 +29,8 @@
 	<% if !@trip.previous.nil? %>
 		<%= link_to "Previous Trip", trip_path(:id => @trip.previous.id, :num => Integer(params[:num])-1), class: "trip_button" %>
 	<% end %>
-<a href="Full Album" class="trip_button">View Full Album</a>
+		<%= link_to "View Full Album", trip_path, class: "trip_button" %>
+<!--<a href="Full Album" class="trip_button">View Full Album</a>-->
 <% if !@trip.next.nil? %>
 		<%= link_to "Next Trip", trip_path(:id => @trip.next.id, :num => Integer(params[:num])+1), class: "trip_button" %>
 	<% end %>
