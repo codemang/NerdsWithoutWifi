@@ -56,3 +56,33 @@
 	color: rgb(54, 113, 155);
 	cursor: pointer;
 	}
+
+.trip_button {
+	border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  line-height: 150px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: gray;
+  border-color: gray;
+  transition: color .3s, background-color .3s, border-color .3s;
+  float: left;
+  margin-left: 50px;
+}
+
+.trip_button:hover {
+	color: white;
+  border-color: rgb(224, 74, 74);
+  background-color: rgb(224, 74, 74);
+}
+
+.button_container {
+  overflow: auto;
+	margin-bottom: 50px;  
+	  border-top: 1px solid rgb(215, 215, 215);
+  width: 650px;
+  padding-top: 33px;
+}
