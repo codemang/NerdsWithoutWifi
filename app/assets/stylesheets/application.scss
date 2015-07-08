@@ -82,32 +82,31 @@ p, a, div {
 .left_column_trip_name {
 	display: block;
 	color: rgb(102, 83, 83);
-  margin-top: 12px;
+  margin-top: 2px;
   font-size: 18px;
   margin-left: 13px;
   transition: color .3s;
   text-decoration: none;
-  display: inline-block;
 }
 
 .selected {
-	color: rgb(252, 145, 4);
+	color: rgb(252, 145, 4) !important;
+	margin-left: 20px;
 }
 
 .left_column_trip_name:not(.selected):hover {
-	color: rgb(54, 113, 155);
-	cursor: pointer;
+	/*color: rgb(54, 113, 155);
+	cursor: pointer;*/
 }
 
 .left_column_pic {
   width: 95%;
   margin-left: 2%;
-  margin-top: 50px;
   transform: rotate(90deg);
   border-radius: 3px;
   padding: 5px;
   background-color: rgb(147, 192, 161);
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 .left_column_title {
@@ -152,12 +151,51 @@ font-size: 18px;
 }
 
 .orange_box {
-  display: inline-block;
-  height: 28px;
-  width: 4px;
-  color: orange;
-  background-color: orange;
-  margin-left: 10px;
-  margin-right: -10px;
-  margin-bottom: -8px;
+	  /* display: inline-block; */
+  background-color: blue;
+  /* width: 5px; */
+  /* height: 100%; */
+  position: absolute;
+  top: 0;
+  left: 10px;
+  bottom: 0;
+  width: 5px;
+  	background-color: rgb(252, 145, 4) !important;
+  	border-radius: 2px;
 }
+
+.park_name {
+	  font-size: 13px;
+  margin-top: 3px;
+  color: rgb(145, 145, 145);
+  font-style: italic;
+}
+
+.right {
+	display: inline-block;
+}
+
+.trip_name_container {
+	position: relative;
+	margin-top: 10px;
+}
+
+.trip_name_container:hover .left_column_trip_name:not(.selected) {
+	color: rgb(54, 113, 155);
+	cursor: pointer;
+}
+
+.home_link {
+	  text-align: center;
+  display: block;
+  text-decoration: none;
+  font-size: 24px;
+  color: rgb(144, 29, 144);
+    margin-top: 26px;
+  margin-bottom: 42px;
+  transition: color .3s;
+}
+
+.home_link:hover {
+	color: #661566;
+	}

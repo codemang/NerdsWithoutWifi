@@ -85,4 +85,28 @@
 	  border-top: 1px solid rgb(215, 215, 215);
   width: 650px;
   padding-top: 33px;
+  clear: both;
+    margin-top: 50px;
+}
+
+.left_image, .right_image {
+	width: 25%;
+}
+
+.left_image {
+  float: left;
+  margin-right: 20px;
+}
+
+.right_image {
+  float: right;
+  margin-left: 20px;
+}
+
+.blog_container {
+	overflow: auto;
+}
+
+.full_image {
+	width: 50%;
 }

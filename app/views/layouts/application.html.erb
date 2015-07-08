@@ -9,18 +9,24 @@
 <body>
 
 <div class="left_column">
+	<%= link_to "NerdsWithoutWifi", root_url, class: "left_column_title home_link" %>
+
 	<%= image_tag("pic.jpg", :class => "left_column_pic", :angle => 90) %>
 
 	<p class="left_column_title">Trips Completed</p>
 	<% if !@trips.nil? %>
 	<% @count = 0 %>
 	 <% @trips.each do |trip| %>
+	 	<div class="trip_name_container">
 		<% @class = (!params[:num].nil? && Integer(params[:num]) == @count ? "orange_box" : "") %>
-		<div>
-	 	<div class="<%= @class %>"></div>
-		<% @class = (!params[:num].nil? && Integer(params[:num]) == @count ? "left_column_trip_name selected" : "left_column_trip_name") %>
-		<%= link_to trip.parkName, trip_path(:id => trip.id, :num => @count), class: @class %>
-	</div>
+	 		<div class="<%= @class %>"></div>
+			<% @class = (!params[:num].nil? && Integer(params[:num]) == @count ? "left_column_trip_name selected" : "left_column_trip_name") %>
+			<div class="right">
+			<%= link_to trip.trailName, trip_path(:id => trip.id, :num => @count), class: @class %>
+			<%= link_to trip.parkName, trip_path(:id => trip.id, :num => @count), class: "park_name "+@class %>
+			</div>
+
+		</div>
 		<% @count += 1 %>
       <% end %>
     <% end %>
