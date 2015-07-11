@@ -15,23 +15,9 @@
 	<%= image_tag("pic.jpg", :class => "left_column_pic", :angle => 90) %>
 
 
-	<div class="left_column_title">
-		<a style="text-decoration:none" href="/pretrip">PreTrip</p>
-	</div>
 
-	<div class="left_column_title">
-      <a style="text-decoration: none" href="/photos">Photos</a>
-    </div>
     
 	<p class="left_column_title">Trips Completed</p>
-	<div class="trip_name_container">
- 		<div class=""></div>
-		<div class="right">
-		<a class="left_column_trip_name" href="/trips/4?num=1">Lava Point</a>
-		<a class="park_name left_column_trip_name" href="/trips/4?num=1">Zion National Park</a>
-		</div>
-
-	</div>
 	<% if !@trips.nil? %>
 	<% @count = 0 %>
 	 <% @trips.each do |trip| %>
@@ -51,18 +37,20 @@
 
     <p class="left_column_title">Next Trip</p>
     	<div class="trip_name_container">	
-    	<p class="left_column_trip_name">Four Loop Pass</p>
-    	<p class="left_column_trip_name park_name">Aspen, Colorado</p>
-	</div>
+	    	<p class="left_column_trip_name">Four Loop Pass</p>
+	    	<p class="left_column_trip_name park_name">Aspen, Colorado</p>
+		</div>
+
+	<div class="left_column_title">
+      <a style="text-decoration: none" href="/photos">Photos</a>
+    </div>
     
     
 
 </div>
 <div class="right_column">
-	<div class="top_column">
-    
-  </div>
-<div class="bottom_column">
+	<div class="top_column"></div>
+	<div class="bottom_column">
 
 	<%= yield %>
 	</div>

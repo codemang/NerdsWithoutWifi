@@ -3,8 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .banner_container {
-		  width: 700px;
-		  height: 400px;
+		  width: 70%;
 		  position: relative;
 		  margin-top: 40px;
 }
@@ -14,7 +13,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 68px;
+  height: 90px;
   background-color: rgba(0, 0, 0, 0.74);
 }
 .banner_pic {
@@ -27,33 +26,49 @@
   line-height: 30px;
   margin-top: 30px;
   margin-right: 40px;
-  max-width: 750px;
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
-.trip_name {
-	  font-family: avenir;
-  color: white;
+.banner_trip_name {
+font-family: avenir;
+  color: rgb(131, 209, 219);
   line-height: 71px;
-  margin-left: 30px;
-  font-size: 30px;
+  font-size: 33px;
   display: inline-block;
+  /* float: left; */
+  font-style: italic;
+  margin-left: 30px;
+  transition: color .3s;
+  clear: both;
+}
+
+.banner_park_name {
+  font-family: avenir;
+  color: white;
+  /* line-height: 86px; */
+  font-size: 18px;
+  /* display: inline-block; */
+  /* float: left; */
+  font-style: italic;
+  margin-left: 30px;
+  transition: color .3s;
+  /* clear: left; */
+  margin-top: -10px;
 }
 
 .full_album_link {
-	font-family: avenir;
+  font-family: avenir;
   color: white;
-  line-height: 71px;
+  line-height: 90px;
   font-size: 16px;
   display: inline-block;
-  float: right;
   font-style: italic;
   margin-right: 30px;
   transition: color .3s;
 }
 
 .full_album_link:hover {
-	color: rgb(54, 113, 155);
+	color: rgb(131, 209, 219);
 	cursor: pointer;
 	}
 
@@ -90,7 +105,7 @@
 }
 
 .left_image, .right_image {
-	width: 25%;
+	width: 45%;
 }
 
 .left_image {
@@ -105,8 +120,23 @@
 
 .blog_container {
 	overflow: auto;
+  max-width: 750px;
+  padding-top: 40px;
 }
 
 .full_image {
-	width: 50%;
+	width: 70%;
+}
+
+p.trip_title {
+  font-size: 30px;
+  color: rgb(142, 35, 35);
+}
+
+.banner_overlay_left {
+  float: left;
+}
+
+.banner_overlay_right {
+  float: right;
 }
