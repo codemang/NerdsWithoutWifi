@@ -27,6 +27,7 @@
 
 
 
+
 <div class="button_container">
 	<% if !@trip.previous.nil? %>
 		<%= link_to "Previous Trip", trip_path(:id => @trip.previous.id, :num => Integer(params[:num])-1), class: "trip_button" %>
