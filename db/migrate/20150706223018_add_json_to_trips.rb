@@ -1,6 +1,5 @@
 class AddJsonToTrips < ActiveRecord::Migration
   def change
-  	  	add_column :trips, :content, :string
-
+  	  add_column :trips, :content, :string
   end
 end

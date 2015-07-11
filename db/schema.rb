@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150708003409) do
+ActiveRecord::Schema.define(version: 20150711221839) do
 
   create_table "trips", force: :cascade do |t|
     t.string   "title"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150708003409) do
     t.string   "parkAddress"
     t.text     "content",        default: "--- []\n"
     t.string   "trailName"
+    t.string   "albumId"
   end
 
 end
