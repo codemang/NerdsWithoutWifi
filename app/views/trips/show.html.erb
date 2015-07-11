@@ -2,9 +2,13 @@
 <div class="banner_container">
 	<%= image_tag(@trip.parkProfilePic, :class => "banner_pic") %>
 	<div class="banner_overlay">
-		<p class="trip_name"><%= @trip.parkName %></p>
-						<a class="full_album_link">See Full Album</a>
-
+		<div class="banner_overlay_left">
+			<p class="banner_trip_name"><%= @trip.trailName %></p>
+			<p class="banner_park_name"><%= @trip.parkName %></p>
+		</div>
+		<div class="banner_overlay_right">
+			<a class="full_album_link">See Full Album</a>
+		</div>
 	</div>
 </div>
 <div class="blog_container">
@@ -15,7 +19,10 @@
 		<% next %>
 	<% end %>
 
-	<% if content[count] == "text" %>
+	<% if content[count] == "title" %>
+		<p class="trip_title"><%=content[count + 1]%></p>
+		<% nex += 2 %>
+	<% elsif content[count] == "text" %>
 		<p class="trip_text"><%=content[count + 1]%></p>
 		<% nex += 2 %>
 	<% elsif content[count] == "image" %>
