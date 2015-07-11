@@ -44,6 +44,7 @@
             $(container).append($('<ul>', {
                 class: "fb-albums"
             }));
+            
             var albumList = $(container).find(".fb-albums");
             var invokeUrl = "https://graph.facebook.com/" + settings.account + "/albums";
             if (settings.accessToken != "") {
