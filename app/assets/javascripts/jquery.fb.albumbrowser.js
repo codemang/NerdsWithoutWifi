@@ -202,10 +202,24 @@
                             if (result.paging && result.paging.next && result.paging.next != "") {
                                 loadAlbums(result.paging.next);
                             }
+
+                                                $(".fb-album")[0].click();
+
+                            
                             //cond end
                         }
+
+                                        // setTimeout(function() {
+                //                 $("fb-album-thumb")[0]click();
+
+                //         console.log("SADFASDFASDF");
+                // }, 2000);
                     }
+
+
                 });
+
+
             }
 
             function loadPhotos(url, container) {
