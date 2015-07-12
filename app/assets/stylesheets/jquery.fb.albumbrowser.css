@@ -11,6 +11,9 @@ h3.fb-album-heading {
     cursor: pointer;
 }
 
+.hidden{ 
+    display: none !important;
+}
 ul.fb-albums, ul.fb-photos {
     list-style: none;
     list-style-type: none;
@@ -31,8 +34,8 @@ ul.fb-albums, ul.fb-photos {
 }
 
 .fb-album, .fb-albums-list, .fb-album-heading    {
-    display: none !important;
-}
+/*    display: none !important;
+*/}
 
 .fb-photos {
     margin-top: 40px !important;

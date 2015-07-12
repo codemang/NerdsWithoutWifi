@@ -30,7 +30,9 @@
             albumsMoreButtonText: "more albums...",
             photosPageSize: 0,
             photosMoreButtonText: "more photos...",
-            checkedPhotos: []
+            checkedPhotos: [],
+            onCompleted: null,
+            albumClass: ""
         }
 
         var settings = $.extend({}, defaults, options);
@@ -42,7 +44,7 @@
                 addAccountInfo(container);
             }
             $(container).append($('<ul>', {
-                class: "fb-albums"
+                class: settings.albumClass
             }));
             
             var albumList = $(container).find(".fb-albums");
@@ -204,17 +206,11 @@
                                 loadAlbums(result.paging.next);
                             }
 
-                                                $(".fb-album")[0].click();
-
+                            settings.onCompleted();
                             
                             //cond end
                         }
 
-                                        // setTimeout(function() {
-                //                 $("fb-album-thumb")[0]click();
-
-                //         console.log("SADFASDFASDF");
-                // }, 2000);
                     }
 
 
