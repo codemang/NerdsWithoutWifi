@@ -1,5 +1,6 @@
 class PhotoController < ApplicationController
 	def index
+		@albumId = params[:albumId]
 	end
 
 	def pretrip

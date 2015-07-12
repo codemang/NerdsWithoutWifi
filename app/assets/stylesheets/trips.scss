@@ -24,7 +24,6 @@
 .trip_text {
 	  font-size: 20px;
   line-height: 30px;
-  margin-top: 30px;
   margin-right: 40px;
     margin-bottom: 30px;
 }
@@ -105,7 +104,7 @@ font-family: avenir;
 }
 
 .left_image, .right_image {
-	width: 45%;
+	width: 60%;
 }
 
 .left_image {
@@ -131,6 +130,7 @@ font-family: avenir;
 p.trip_title {
   font-size: 30px;
   color: rgb(142, 35, 35);
+  margin-bottom: 30px;
 }
 
 .banner_overlay_left {

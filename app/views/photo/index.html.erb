@@ -1,12 +1,18 @@
 
+<div style="font-size: 30px;
+  color: rgb(142, 35, 35);margin-top: 30px;">Photos</div>
 <div class="fb-album-container"></div>
 
 <script type="text/javascript">
     $(document).ready(function () {
+        var album_class = "fb-albums";
+        if( "<%= @albumId %>" !== ""){ album_class += " hidden"; }
+
         $(".fb-album-container").FacebookAlbumBrowser({
             account: "Nerdswithoutwifi",
             accessToken: "385699948306043|VDKalznZc7EleqckGeaUVKo4-Cg",
-            skipAlbums: ["Profile Pictures", "Timeline Photos"],
+            albumClass: album_class,
+            skipAlbums: ["Profile Pictures", "Timeline Photos", "Cover Photos"],
             showAccountInfo: true,
             showImageCount: true,
             showImageText: true,
@@ -26,6 +32,15 @@
             },
             photoSelected: function (photo) {
                 console.log("PHOTO CLICK: " + photo.id + " - " + photo.url + " - " + photo.thumb);
+            },
+            onCompleted: function() {
+                if ("<%= @albumId %>" !== "") {
+                    console.log("ASDF");
+                    $('[data-id="<%= @albumId %>"]').click();
+                }
+                else {
+                    console.log("GGGG");
+                }
             }
         });
     });
