@@ -7,8 +7,10 @@
 			<p class="banner_park_name"><%= @trip.parkName %></p>
 		</div>
 		<div class="banner_overlay_right">
-			<a class="full_album_link">See Full Album</a>
-		</div>
+						<%= link_to "View Full Album", photos_path(:albumId => @trip.albumId), class: "full_album_link" %>
+
+<!-- 			<a class="full_album_link">See Full Album</a>
+ -->		</div>
 	</div>
 </div>
 <div class="blog_container">
