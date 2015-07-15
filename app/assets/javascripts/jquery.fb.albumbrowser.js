@@ -403,7 +403,7 @@
                     if (settings.showImageText || settings.likeButton) {
                         lightboxContent.append($("<span>", { class: "fb-preview-text" }));
                     }
-                    overlay.append($("<img>", { class: "fb-preview-img-prev", src: "/assets/prev-icon.png" }));
+                    overlay.append($("<img>", { class: "fb-preview-img-prev", src: "../images/prev-icon.png" }));
                     overlay.append($("<img>", { class: "fb-preview-img-next", src: "../images/next-icon.png" }));
 
                     $("body").append(overlay);
